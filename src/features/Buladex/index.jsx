@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 function Buladex () {
     return(
@@ -13,9 +14,9 @@ function Buladex () {
                 </div>
                 <div className="flex flex-col items-center gap-6">
                     <h2 className='text-white text-2xl text-center'> Neste minigame você deve adivinhar se os nomes apresentados são de pokémons ou remédios!</h2>
-                    {/* <Link> */}
+                    <Link to="/Buladex/Game">
                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl mt-4 text-3xl">Iniciar!</button>
-                    {/* </Link> */} 
+                    </Link> 
                 </div>
             </div>
             
