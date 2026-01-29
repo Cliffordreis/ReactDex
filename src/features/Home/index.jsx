@@ -8,7 +8,6 @@ function Home () {
                 <p>caixa</p>
                 <p>jantar</p>
             </div>
-            
         </div>
         
         
