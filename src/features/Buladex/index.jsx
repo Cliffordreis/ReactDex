@@ -15,7 +15,7 @@ function Buladex () {
                 <div className="flex flex-col items-center gap-6">
                     <h2 className='text-white text-2xl text-center'> Neste minigame você deve adivinhar se os nomes apresentados são de pokémons ou remédios!</h2>
                     <Link to="/Buladex/Game">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-2xl mt-4 text-3xl">Iniciar!</button>
+                        <button className="flex-1 w-30 py-3 md:py-3 bg-blue-500 hover:bg-blue-400 text-white text-xl md:text-2xl rounded-lg font-bold border-b-4 border-blue-700 active:border-0 active:translate-y-1 transition-all shadow-lg">Iniciar!</button>
                     </Link> 
                 </div>
             </div>
