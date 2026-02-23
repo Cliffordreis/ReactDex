@@ -1,16 +1,123 @@
-# React + Vite
+# ⚡ ReactDex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto pessoal desenvolvido para transformar o consumo de APIs em uma experiência interativa e divertida, inspirado no universo Pokémon — mas indo além de uma simples Pokédex.
 
-Currently, two official plugins are available:
+O **ReactDex** reúne minigames e desafios que testam conhecimento, lógica e reconhecimento visual, tudo construído com foco em aprendizado prático de desenvolvimento front-end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Demonstração
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Em breve: deploy online
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💡 Sobre o projeto
+
+O ReactDex nasceu como uma forma de praticar desenvolvimento com React de maneira menos engessada.
+
+A ideia foi criar algo que:
+
+* Consumisse APIs reais
+* Tivesse interatividade
+* Envolvesse lógica de jogo
+* E fosse visualmente agradável
+
+Ao invés de apenas exibir dados como uma Pokédex tradicional, o projeto evoluiu para uma coleção de **minigames interativos**.
+
+---
+
+## 🎮 Funcionalidades
+
+* 🔍 Minigame de nomes entre pokémons e remédios (Buladex)
+* 🧠 Quiz de tipos dos pokemons (Poketipo)
+* ⚔️ Jogo "Pokémon ou Digimon?" (DigiPokemon)
+* 🎲 Geração aleatória de perguntas
+* 📡 Consumo de APIs externas em tempo real
+* 💾 Manipulação dinâmica de estado
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+### ⚛️ Front-end
+
+* React
+* React Router
+* JavaScript (ES6+)
+
+### 🎨 Estilização
+
+* Tailwind CSS
+* Design com foco em UI moderna (glassmorphism, gradientes, responsividade)
+
+### 🌐 APIs
+
+* PokeAPI (dados de Pokémon)
+* Digi-API (dados de Digimon)
+
+---
+
+## 📚 Conceitos que pratiquei
+
+Esse projeto foi essencial para consolidar diversos conceitos importantes:
+
+### 🔁 React & Estado
+
+* useState
+* Renderização condicional
+* Atualização dinâmica da UI
+
+### 🔀 Lógica de programação
+
+* Geração de dados aleatórios
+* Manipulação de arrays
+* Controle de fluxo para jogos
+
+### 🌍 Consumo de API
+
+* Fetch API
+* Tratamento de respostas JSON
+* Uso de dados externos na interface
+
+### 🎯 UX/UI
+
+* Feedback visual ao usuário
+* Transições suaves
+* Layout responsivo (mobile + desktop)
+
+---
+
+## 🧠 Aprendizados
+
+Mais do que um projeto visual, o ReactDex representa evolução prática em:
+
+* Pensar como front-end de verdade (não só copiar código)
+* Criar interfaces com propósito
+* Resolver problemas reais de lógica
+* Melhorar organização de componentes
+
+---
+
+## 🔮 Possíveis melhorias
+
+* Sistema de Login
+* Ranking de jogadores
+* Persistência com backend
+* Animações mais avançadas
+* Outros minigames
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Clifford Reis**
+Projeto criado no tempo livre com foco em aprendizado e evolução constante.
+
+---
+
+## ⭐ Considerações finais
+
+Projeto simples mas bacana de se desenvolver, principalmente quando envolve o que amamos.
+
+---
