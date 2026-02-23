@@ -12,7 +12,7 @@ import DigiPokemonGame from './features/Digipokemon/DigiPokemonGame';
 
 function App() {
   return (
-    <BrowserRouter basename="/reactdex">
+    <BrowserRouter basename="/ReactDex">
       <Header />
 
       <Routes>

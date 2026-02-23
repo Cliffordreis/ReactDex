@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useBuladexLogic } from "./LogicBuladex";
+import POKEDEXIMG from "../../assets/pokedex.png";
 
 function BuladexGame() {
     // CONECTANDO O CÉREBRO:
@@ -21,7 +22,7 @@ function BuladexGame() {
                 {/* PLACAR (Opcional - para ver funcionando) */}
                 {/* Pokedex */}
                 <img 
-                    src="../pokedex.png" 
+                    src={POKEDEXIMG}
                     alt="Pokedex" 
                     className="w-full h-auto drop-shadow-2xl" 
                 />

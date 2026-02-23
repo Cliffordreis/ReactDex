@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import LOGOIMG from '../assets/logo.png';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ function Header() {
                 <Link to="/">
                     <img 
                         className='drop-shadow-[0_0_10px_rgba(34,211,238,0.5)] hover:scale-105 transition-all duration-300' 
-                        src='../Logo.png' 
+                        src={LOGOIMG}
                         alt="ReactDex Logo"
                         width={150} 
                     />

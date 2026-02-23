@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import REMEDIOIMG from "../../assets/Remedio.png";
+import POKEMONIMG from "../../assets/Pokebola.png";
 
 function Buladex () {
     return(
@@ -9,9 +11,9 @@ function Buladex () {
                     <h1 className="text-4xl font-bold text-center text-emerald-400">Buladex</h1>
                 </div>
                 <div className="flex justify-center items-center gap-3 md:gap-8">
-                    <img className="w-32 md:w-52 h-auto object-contain" src="./Remedio.png"></img>
+                    <img className="w-32 md:w-52 h-auto object-contain" src={REMEDIOIMG}></img>
                     <h1 className="font-bold text-3xl md:text-6xl text-slate-400">OU</h1>
-                    <img className="w-32 md:w-52 h-auto object-contain" src="./Pokebola.png"></img>
+                    <img className="w-32 md:w-52 h-auto object-contain" src={POKEMONIMG}></img>
                 </div>
                 <div className="flex flex-col items-center gap-6">
                     <h2 className='text-white text-2xl text-center'> Neste minigame você deve adivinhar se os nomes apresentados são de pokémons ou remédios!</h2>

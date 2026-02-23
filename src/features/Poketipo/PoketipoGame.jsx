@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { usePoketipoLogic } from "./LogicPoketipo";
+import POKEDEXIMG from "../../assets/pokedex.png";
 
 function PoketipoGame() {
     // CONECTANDO O CÉREBRO:
@@ -28,7 +29,7 @@ function PoketipoGame() {
                 {/* PLACAR (Opcional - para ver funcionando) */}
                 {/* Pokedex */}
                 <img 
-                    src="../pokedex.png" 
+                    src={POKEDEXIMG}
                     alt="Pokedex" 
                     className="w-full h-auto drop-shadow-2xl" 
                 />
