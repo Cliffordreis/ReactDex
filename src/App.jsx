@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './features/Home';
 import Buladex from './features/Buladex';
@@ -12,7 +12,7 @@ import DigiPokemonGame from './features/Digipokemon/DigiPokemonGame';
 
 function App() {
   return (
-    <BrowserRouter basename="/ReactDex">
+    <HashRouter>
       <Header />
 
       <Routes>
@@ -29,7 +29,7 @@ function App() {
 
         <Route path="/sobre" element={<Sobre />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
