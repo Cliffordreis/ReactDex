@@ -21,7 +21,7 @@ function BuladexGame() {
                 {/* PLACAR (Opcional - para ver funcionando) */}
                 {/* Pokedex */}
                 <img 
-                    src="/pokedex.png" 
+                    src="../pokedex.png" 
                     alt="Pokedex" 
                     className="w-full h-auto drop-shadow-2xl" 
                 />

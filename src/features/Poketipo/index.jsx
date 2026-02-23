@@ -9,7 +9,7 @@ function Poketipo () {
                     <h1 className="text-4xl font-bold text-center text-emerald-400">Poketipo</h1>
                 </div>
                 <div className="flex justify-center items-center gap-3 md:gap-8">
-                    <img className="w-65 md:w-90 h-auto object-contain" src="../PikachuTipos.png"></img>
+                    <img className="w-65 md:w-90 h-auto object-contain" src="./PikachuTipos.png"></img>
                 </div>
                 <div className="flex flex-col items-center gap-6">
                     <h2 className='text-white text-2xl text-center'> Neste minigame você deve adivinhar o tipo do pokémon entre algumas opções!</h2>

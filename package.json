@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Cliffordreis.github.io/reactdex",
+  "homepage": "https://Cliffordreis.github.io/ReactDex",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
