@@ -44,7 +44,7 @@ function Header() {
                 <Link to="/">
                     <img 
                         className='drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]' 
-                        src='./Logo.png' 
+                        src={LOGOIMG}
                         alt="ReactDex Logo"
                         width={140}
                         onClick={() => setIsMenuOpen(false)}
