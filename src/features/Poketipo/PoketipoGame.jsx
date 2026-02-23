@@ -11,42 +11,14 @@ function PoketipoGame() {
         jogoIniciado, 
         iniciarJogo, 
         verificarResposta, 
-        recordePoketipo
+        recordePoketipo,
+        pokemonAtual
     } = usePoketipoLogic();
-
-    const gerarAlternativas = (tiposCorretos) => {
-        // sorteia 1 tipo correto
-        const tipoCorretoSorteado =
-            tiposCorretos[Math.floor(Math.random() * tiposCorretos.length)];
-
-        // pega o objeto completo do tipo correto
-        const tipoCorretoObj = DATA_TIPOS.find(
-            tipo => tipo.name === tipoCorretoSorteado
-        );
-
-        // remove o correto dos errados
-        const tiposErrados = DATA_TIPOS.filter(
-            tipo => tipo.name !== tipoCorretoSorteado
-        );
-
-        // embaralha errados
-        const erradosEmbaralhados = [...tiposErrados].sort(
-            () => 0.5 - Math.random()
-        );
-
-        // pega 3 errados
-        const tresErrados = erradosEmbaralhados.slice(0, 3);
-
-        // junta tudo
-        const alternativas = [
-            tipoCorretoObj,
-            ...tresErrados
-        ];
-
-        // embaralha novamente
-        return alternativas.sort(() => 0.5 - Math.random());
-    };
-
+    const fallbackTipos = Array(4).fill({
+    name: "",
+    label: "-",
+    color: "bg-gray-500"
+    });
 
 
     return (
@@ -70,6 +42,17 @@ function PoketipoGame() {
                         Record: <br />
                             {recordePoketipo}
                     </p>
+                </div>
+                <div className="absolute top-[30%] left-[05%] w-[40%] h-[30%] flex items-center justify-center">
+                    {jogoIniciado && pokemonAtual ? (
+                        <img 
+                            src={pokemonAtual.imagem} 
+                            alt={pokemonAtual.nome}
+                            className="max-h-full object-contain"
+                        />
+                    ) : (
+                        <span className="text-gray-500 text-xs"></span>
+                    )}
                 </div>
                 {/* seta <- */}
                 <div className="absolute top-[-1%] left-[-13%] w-[45%] h-[20%] flex items-center justify-center">
@@ -99,34 +82,42 @@ function PoketipoGame() {
                     </button>
                 </div>
                 <div className="absolute bottom-[21.5%] right-[6%] w-[38%] flex justify-center gap-1 md:gap-2">
-                    
-                    <button onClick={() => verificarResposta('remedio')} // <--- Responde Remédio
-                        disabled={!jogoIniciado} // Desabilita se não iniciou
-                     className="flex-1 py-1 md:py-1 bg-blue-500 hover:bg-blue-400 text-white text-xs md:text-lg rounded-lg font-bold border-b-4 border-blue-700 active:border-0 active:translate-y-1 transition-all shadow-lg">
-                        Tipo
-                    </button>
-
-                    <button onClick={() => verificarResposta('pokemon')} // <--- Responde Pokémon
-                        disabled={!jogoIniciado} // Desabilita se não iniciou
-                     className="flex-1 py-1 md:py-1 bg-yellow-500 hover:bg-yellow-400 text-white text-xs md:text-lg rounded-lg font-bold border-b-4 border-yellow-700 active:border-0 active:translate-y-1 transition-all shadow-lg">
-                        Tipo
-                    </button>
-
+                    {(perguntaAtual?.tipos || fallbackTipos)
+                    .slice(0, 2)
+                    .map((tipo, index) => (
+                        <button
+                            key={index}
+                            onClick={() => verificarResposta(tipo.name)}
+                            disabled={!jogoIniciado}
+                            className={`
+                                flex-1 py-1 md:py-1 text-white text-xs md:text-lg rounded-lg font-bold border-b-4 transition-all shadow-lg
+                                ${jogoIniciado 
+                                    ? `${tipo.color} border-black/30 hover:brightness-110 active:translate-y-1 active:border-0` 
+                                    : "bg-gray-500 border-gray-700 cursor-not-allowed"}
+                            `}
+                        >
+                            {tipo.label || ""}
+                        </button>
+                    ))}
                 </div>
                 <div className="absolute bottom-[9%] right-[6%] w-[38%] flex justify-center gap-1 md:gap-2">
-                    
-                    <button onClick={() => verificarResposta('remedio')} // <--- Responde Remédio
-                        disabled={!jogoIniciado} // Desabilita se não iniciou
-                     className="flex-1 py-1 md:py-1 bg-blue-500 hover:bg-blue-400 text-white text-xs md:text-lg rounded-lg font-bold border-b-4 border-blue-700 active:border-0 active:translate-y-1 transition-all shadow-lg">
-                        Tipo
+                {(perguntaAtual?.tipos || fallbackTipos)
+                .slice(2, 4)
+                .map((tipo, index) => (
+                    <button
+                        key={index}
+                        onClick={() => verificarResposta(tipo.name)}
+                        disabled={!jogoIniciado}
+                        className={`
+                            flex-1 py-1 md:py-1 text-white text-xs md:text-lg rounded-lg font-bold border-b-4 transition-all shadow-lg
+                            ${jogoIniciado 
+                                ? `${tipo.color} border-black/30 hover:brightness-110 active:translate-y-1 active:border-0` 
+                                : "bg-gray-500 border-gray-700 cursor-not-allowed"}
+                        `}
+                    >
+                        {tipo.label || ""}
                     </button>
-
-                    <button onClick={() => verificarResposta('pokemon')} // <--- Responde Pokémon
-                        disabled={!jogoIniciado} // Desabilita se não iniciou
-                     className="flex-1 py-1 md:py-1 bg-yellow-500 hover:bg-yellow-400 text-white text-xs md:text-lg rounded-lg font-bold border-b-4 border-yellow-700 active:border-0 active:translate-y-1 transition-all shadow-lg">
-                        Tipo
-                    </button>
-
+                ))}
                 </div>
 
             </div>

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { useBuladexLogic } from "./LogicBuladex";
+import { useDigiPokemonLogic } from "./LogicDigiPokemon.js";
 
-function BuladexGame() {
+function DigiPokemonGame() {
     // CONECTANDO O CÉREBRO:
-    // Pegamos as funções e variáveis de dentro do LogicBuladex
+    // Pegamos as funções e variáveis de dentro do LogicDigipokemon
     const { 
         perguntaAtual, 
         pontos, 
@@ -11,8 +11,8 @@ function BuladexGame() {
         jogoIniciado, 
         iniciarJogo, 
         verificarResposta, 
-        recorde
-    } = useBuladexLogic();
+        recordeDigipokemon,
+    } = useDigiPokemonLogic();
 
     return (
         <div className="flex justify-center items-start min-h-screen p-4 pt-10 md:pt-24 card-anm-in">
@@ -33,7 +33,7 @@ function BuladexGame() {
                 <div className="absolute top-[76.5%] left-[-3%] w-[45%] h-[20%] flex items-center justify-center">
                     <p className="text-[8px] md:text-xs font-bold uppercase tracking-widest text-center animate-pulse text-emerald-800">
                         Record: <br />
-                            {recorde}
+                            {recordeDigipokemon}
                     </p>
                 </div>
                 {/* seta <- */}
@@ -51,9 +51,15 @@ function BuladexGame() {
                             {feedback}
                         </h2>
                         ) : (
-                            <h2 className="text-white font-mono text-xs md:text-2xl lg:text-2xl font-bold uppercase tracking-widest text-center animate-pulse">
+                            <h2 className="text-white font-mono text-xs md:text-2xl lg:text-lg font-bold uppercase tracking-widest text-center animate-pulse">
                                 {/* Se o jogo iniciou mostra o nome, senão mostra "---" */}
-                                {jogoIniciado && perguntaAtual ? perguntaAtual.nome : "---"}
+                                {jogoIniciado && perguntaAtual
+                                    ? perguntaAtual.nome.split(" ").map((palavra, i) => (
+                                        <span key={i} className="block">
+                                            {palavra}
+                                        </span>
+                                        ))
+                                    : "---"}
                             </h2>
                         )}
                 </div>
@@ -66,7 +72,7 @@ function BuladexGame() {
                 <div className="absolute bottom-[9%] right-[6%] w-[38%] flex justify-center gap-1 md:gap-2">
                     
                 <button 
-                    onClick={() => verificarResposta('remedio')}
+                    onClick={() => verificarResposta('Pokémon')}
                     disabled={!jogoIniciado}
                     className={`
                         flex-1 py-1 md:py-1 text-white text-xs md:text-lg rounded-lg font-bold border-b-4 transition-all shadow-lg
@@ -75,11 +81,11 @@ function BuladexGame() {
                             : "bg-gray-500 border-gray-700 cursor-not-allowed"}
                     `}
                 >
-                    {jogoIniciado ? "Remédio" : "-"}
+                    {jogoIniciado ? "Pokémon" : "-"}
                 </button>
 
                 <button 
-                    onClick={() => verificarResposta('pokemon')}
+                    onClick={() => verificarResposta('Digimon')}
                     disabled={!jogoIniciado}
                     className={`
                         flex-1 py-1 md:py-1 text-white text-xs md:text-lg rounded-lg font-bold border-b-4 transition-all shadow-lg
@@ -88,7 +94,7 @@ function BuladexGame() {
                             : "bg-gray-500 border-gray-700 cursor-not-allowed"}
                     `}
                 >
-                    {jogoIniciado ? "Pokémon" : "-"}
+                    {jogoIniciado ? "Digimon" : "-"}
                 </button>
 
                 </div>
@@ -100,4 +106,4 @@ function BuladexGame() {
 }
 
 
-export default BuladexGame;
+export default DigiPokemonGame;

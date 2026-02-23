@@ -7,8 +7,9 @@ import Digipokemon from './features/Digipokemon';
 import Sobre from './features/Sobre';
 import BuladexGame from './features/Buladex/Buladexgame';
 import PoketipoGame from './features/Poketipo/PoketipoGame';
+import DigiPokemonGame from './features/Digipokemon/DigiPokemonGame';
 
-import { useState } from 'react'
+import { useState } from 'react'  
 
 function App() {
   
@@ -26,7 +27,8 @@ function App() {
         <Route path="/Sobre" element={<Sobre />} />
         <Route path="/Buladex/Game" element={<BuladexGame />} />
         <Route path="/Poketipo/Game" element={<PoketipoGame />} />
-      </Routes>
+        <Route path="/Digipokemon/Game" element={<DigiPokemonGame />} />      
+        </Routes>
     </BrowserRouter>
   )
 }

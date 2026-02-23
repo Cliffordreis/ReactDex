@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 
 function Buladex () {
     return(
-        <div className='flex items-center p-5 min-h-[80vh] justify-center text-white'>
-            <div className=' flex flex-col card-anm-in bg-slate-900 w-full max-w-2xl p-8 shadow-xl rounded-2xl font-bold gap-6'>
+        <div className='flex justify-center items-start min-h-screen p-6'>
+            
+            <div className='w-full max-w-2xl bg-slate-900/80 backdrop-blur-md border border-slate-700 rounded-3xl shadow-2xl p-6 md:p-10'>
                 <div>
-                    <h1 className="text-4xl font-bold text-center">Buladex</h1>
+                    <h1 className="text-4xl font-bold text-center text-emerald-400">Buladex</h1>
                 </div>
                 <div className="flex justify-center items-center gap-3 md:gap-8">
                     <img className="w-32 md:w-52 h-auto object-contain" src="../Remedio.png"></img>
