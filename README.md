@@ -8,7 +8,7 @@ O **ReactDex** reúne minigames e desafios que testam conhecimento, lógica e re
 
 ## 🚀 Demonstração
 
-> Em breve: deploy online
+> https://cliffordreis.github.io/ReactDex
 
 ---
 
